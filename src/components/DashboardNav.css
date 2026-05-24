@@ -1,0 +1,33 @@
+.dashboard-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-lg) 0;
+}
+
+.dashboard-nav__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.dashboard-nav__link:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.dashboard-nav__link.active {
+  background: rgba(201,168,76,0.1);
+  color: var(--accent-gold);
+}
+
+.dashboard-nav__icon {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}

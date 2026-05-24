@@ -1,0 +1,84 @@
+/* ============ STATS BAR ============ */
+.stats-bar {
+  padding: var(--space-2xl) 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.stats-bar__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.stats-bar__item {
+  text-align: center;
+  padding: var(--space-lg);
+  animation: statFadeIn 0.6s ease-out both;
+}
+
+@keyframes statFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stats-bar__icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.stats-bar__number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-xs);
+  line-height: 1;
+}
+
+.stats-bar__label {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width: 768px) {
+  .stats-bar__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .stats-bar__number {
+    font-size: var(--text-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-bar__container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    padding: 0 var(--space-md);
+  }
+  
+  .stats-bar__item {
+    padding: var(--space-md);
+  }
+  
+  .stats-bar__icon {
+    font-size: 1.5rem;
+  }
+}

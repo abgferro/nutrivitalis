@@ -1,0 +1,84 @@
+/* ============ MEDICAL DISCLAIMER BANNER ============ */
+.medical-disclaimer {
+  background: rgba(201, 168, 76, 0.05);
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  padding: var(--space-md) 0;
+}
+
+[data-theme="dark"] .medical-disclaimer {
+  background: rgba(201, 168, 76, 0.03);
+  border-color: rgba(201, 168, 76, 0.08);
+}
+
+.medical-disclaimer__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.medical-disclaimer__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201, 168, 76, 0.1);
+  border-radius: var(--radius-full);
+  color: var(--accent-gold);
+}
+
+.medical-disclaimer__text {
+  flex: 1;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+  min-width: 250px;
+}
+
+.medical-disclaimer__text strong {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.medical-disclaimer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--accent-gold);
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.medical-disclaimer__link:hover {
+  background: rgba(201, 168, 76, 0.1);
+  color: var(--accent-gold-light);
+}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width: 768px) {
+  .medical-disclaimer__container {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-sm) var(--space-lg);
+  }
+  
+  .medical-disclaimer__icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .medical-disclaimer__text {
+    font-size: var(--text-xs);
+  }
+}

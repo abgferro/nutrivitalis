@@ -1,0 +1,70 @@
+.onboarding-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+}
+
+.onboarding-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  animation: fadeInUp 0.4s ease;
+}
+
+.onboarding-icon {
+  font-size: 3rem;
+  display: block;
+  margin: var(--space-md) 0;
+}
+
+.onboarding-step-indicator {
+  color: var(--accent-gold);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.onboarding-title {
+  margin-bottom: var(--space-md);
+}
+
+.onboarding-desc {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.onboarding-dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.onboarding-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-subtle);
+  transition: background var(--transition-fast);
+}
+
+.onboarding-dots .dot.active {
+  background: var(--accent-gold);
+}
+
+.onboarding-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}

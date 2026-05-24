@@ -1,0 +1,32 @@
+import './Differentials.css'
+
+const diffs = [
+  { icon: '🌍', title: 'Multilíngue', desc: 'Português, Inglês e Espanhol. IA responde no seu idioma.' },
+  { icon: '♿', title: 'Acessível', desc: 'Modo claro/escuro, fontes ajustáveis, navegação por teclado.' },
+  { icon: '🔒', title: 'Seguro', desc: 'Dados criptografados, conformidade LGPD e GDPR.' },
+  { icon: '📱', title: 'PWA', desc: 'Funciona como app no celular, offline e notificações.' },
+]
+
+function Differentials() {
+  return (
+    <section className="differentials section">
+      <div className="container">
+        <div className="section__header">
+          <span className="section__badge">Por que escolher</span>
+          <h2 className="section__title">Diferenciais <span className="text-gradient">NutriVitalis</span></h2>
+        </div>
+        <div className="differentials__grid">
+          {diffs.map((d, i) => (
+            <div key={i} className="differentials__card">
+              <span className="differentials__icon">{d.icon}</span>
+              <h3>{d.title}</h3>
+              <p>{d.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Differentials
